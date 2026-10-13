@@ -80,7 +80,15 @@ class _RegisterPageState extends State<RegisterPage> {
         const SnackBar(content: Text('Hãy chọn ít nhất một buổi học')),
       );
       return;
+        }
+        // --- CODE CỦA BÀI NÂNG CAO 2 ---
+    if (_heDaoTao == 'Vừa làm vừa học' && !_buoiDaChon.contains('Tối')) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Hệ Vừa làm vừa học bắt buộc phải chọn buổi Tối')),
+      );
+      return; 
     }
+    // -------------------------------
     if (!hopLe) return;
 
     showDialog<void>(
