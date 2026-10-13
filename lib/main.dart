@@ -137,6 +137,7 @@ class _RegisterPageState extends State<RegisterPage> {
               TextFormField(
                 controller: _hoTenCtrl,
                 textInputAction: TextInputAction.next,
+                maxLength: 50,
                 decoration: const InputDecoration(
                   labelText: 'Họ và tên *',
                   prefixIcon: Icon(Icons.person_outline),
